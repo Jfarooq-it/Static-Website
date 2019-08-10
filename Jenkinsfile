@@ -3,7 +3,7 @@ pipeline {
   stages  {
     stage('Upload to AWS') {
       steps  {
-         withAWS(region:’us-east-2’) {
+         withAWS(region:'us-east-2') {
            s3Upload(file:’index.html’, bucket:’udacity-jenkins-project’)
       }
     }
