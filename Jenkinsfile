@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages  {
-    stage('Upload to AWS') 
+    stage('Upload to AWS'), 
     withAWS(region:'us-east-2') {
       steps  {
           sh 'echo "Hello World"'
