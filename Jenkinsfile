@@ -4,7 +4,9 @@ pipeline {
        stage('Upload to AWS') 
     {
       steps {
-          echo "Hello"
+          withAWS(region:’us-east-2’,credentials:’UJP’) {
+            s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:’index.html’, bucket:’c3pipelines’)
+          }
           }
      }
           }
