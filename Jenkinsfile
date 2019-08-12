@@ -5,7 +5,7 @@ pipeline {
         steps {
           echo "Hellooooo!"
           }
-       stage('Upload to AWS') {
+      stage('Upload to AWS') {
         steps {
           echo "AWS!"
           }
