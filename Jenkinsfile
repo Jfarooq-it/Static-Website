@@ -3,8 +3,8 @@ pipeline {
     stages {
       stage(‘Upload to AWS’) {
         steps {
-          withAWS(credentials:’UJP1’) {
-            
+          withAWS(credentials:’UJP2’) {
+            s3Upload(file:’index.html’, bucket:’udacity-jenkins-project’)
           }
         }
       }
