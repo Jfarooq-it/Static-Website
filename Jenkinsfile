@@ -8,7 +8,7 @@ pipeline {
 		  }
       stage('Upload to AWS') {
         steps {
-          withAWS(endpointUrl:'http://udacity-jenkins-project.s3.amazonaws.com', credentials:'UJP1') {
+          withAWS(credentials:'UJP1') {
 		    s3Upload(file:'index.html', bucket:'udacity-jenkins-project') 
 		   }
           }
