@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+      stage('Build') {
+        steps {
+          echo "Hellooooo!"
+          }
+		  }
       stage('Upload to AWS') {
         steps {
           withAWS(region:’us-east-2’,credentials:’UJP2’) {
