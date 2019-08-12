@@ -5,11 +5,12 @@ pipeline {
         steps {
           echo "Hellooooo!"
           }
-      stage('Build') {
+		  }
+      stage('Upload to AWS') {
         steps {
           echo "AWS!"
           }
         }
       }
     }
-}
+	
