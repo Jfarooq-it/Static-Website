@@ -3,7 +3,9 @@ pipeline {
     stages {
       stage('Upload to AWS') {
         steps {
-          echo "AWS!"
+          withAWS(region:’us-east-2’,credentials:’UJP2’) {
+		    s3Upload(file:'index.html', bucket:'udacity-jenkins-project') 
+		   }
           }
         }
       }
